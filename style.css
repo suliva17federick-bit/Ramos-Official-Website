@@ -1,0 +1,399 @@
+/* RESET & GLOBAL */
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* GOVPH BAR */
+.govph {
+  background: #eeeeee;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.govph span {
+  font-weight: bold;
+  color: #8b0000;
+}
+
+.govph nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.govph nav a:hover {
+  color: #b22222;
+  text-decoration: underline;
+}
+
+/* HERO HEADER */
+.hero {
+  background: linear-gradient(
+    rgba(240, 237, 237, 0.75),
+    rgba(139,0,0,0.75)
+  ), url("images/banner.jpg") center/cover;
+  color: white;
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.seal {
+  width: 110px;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+.hero p {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 60px 10%;
+}
+
+.white { background: white; }
+.gray { background: #f0f0f0; }
+
+/* HEADINGS */
+h2 {
+  
+  padding-left: 15px;
+  margin-bottom: 30px;
+  color: #8b0000;
+  text-align: center;
+}
+
+h3 {
+  color: #444;
+}
+
+/* CENTER FIX (BUG FIXED) */
+.center {
+  text-align: center;
+}
+
+/* GRID SYSTEM */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.grid.two {
+  grid-template-columns: 2fr 1fr;
+}
+
+/* VIRTUAL TOUR */
+.virtual {
+  background: linear-gradient(to right, #8b0000, #b22222);
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.virtual h2 {
+  color: white;
+  border: none;
+}
+
+.virtual button {
+  padding: 15px 45px;
+  font-size: 18px;
+  background: gold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.virtual button:hover {
+  background: #ffd700;
+  transform: scale(1.05);
+}
+
+/* CARDS */
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card h4 {
+  margin: 10px 0 5px;
+  color: #8b0000;
+}
+
+.card a {
+  color: #b22222;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* OFFICIALS */
+.officials img {
+  height: 500px;
+  object-fit: cover;
+}
+
+/* LISTS */
+.list {
+  background: white;
+  padding: 20px;
+  list-style: none;
+  border-radius: 10px;
+}
+
+.list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.list li:last-child {
+  border-bottom: none;
+}
+
+/* SERVICES */
+.service {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.service:hover {
+  background: #8b0000;
+  color: white;
+  transform: translateY(-5px);
+}
+
+/* MAP */
+iframe {
+  border-radius: 12px;
+}
+
+/* FOOTER */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  .section {
+    padding: 50px 6%;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .grid.two {
+    grid-template-columns: 1fr;
+  }
+
+  .govph {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* ===========================
+   SMOOTH TRANSITIONS
+=========================== */
+a, button, .card, .service {
+  transition: all 0.3s ease;
+}
+
+/* ===========================
+   HERO ENHANCEMENTS
+=========================== */
+.hero::after {
+  content: "";
+  display: block;
+  margin: 25px auto 0;
+  width: 80px;
+  height: 4px;
+  background: gold;
+  border-radius: 2px;
+}
+
+/* ===========================
+   SECTION SEPARATORS
+=========================== */
+.section:not(:first-child) {
+  border-top: 1px solid #e0e0e0;
+}
+
+/* ===========================
+   HEADINGS POLISH
+=========================== */
+h2 {
+  font-size: 26px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* ===========================
+   VISION / MISSION CARDS
+=========================== */
+.section.white .grid > div {
+  background: #fafafa;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* OFFICIALS – FIXED IMAGE SIZE */
+.officials .card img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #8b0000;
+  margin: 0 auto 15px;
+  display: block;
+}
+
+
+/* ===========================
+   NEWS CARD BADGE
+=========================== */
+.card h4::before {
+  content: "📰 ";
+}
+
+/* ===========================
+   LIST STYLING
+=========================== */
+.list li::before {
+  content: "✔ ";
+  color: #8b0000;
+  font-weight: bold;
+}
+
+/* ===========================
+   BARANGAYS CENTER FIX
+=========================== */
+ul.list.center {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ===========================
+   SERVICES ICON STYLE
+=========================== */
+.service::before {
+  content: "🏛️";
+  display: block;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.service:nth-child(2)::before { content: "📄"; }
+.service:nth-child(3)::before { content: "📜"; }
+.service:nth-child(4)::before { content: "📅"; }
+
+/* ===========================
+   TOURISM CARDS
+=========================== */
+.section.gray .card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ===========================
+   EMERGENCY HIGHLIGHT
+=========================== */
+.section.white:last-of-type .list li {
+  font-weight: bold;
+}
+
+/* ===========================
+   MAP SHADOW
+=========================== */
+iframe {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* ===========================
+   FOOTER POLISH
+=========================== */
+footer p {
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* ===========================
+   BUTTON EFFECTS
+=========================== */
+button:active {
+  transform: scale(0.95);
+}
+
+/* ===========================
+   SCROLL ANIMATION (OPTIONAL)
+=========================== */
+.section {
+  animation: fadeInUp 0.8s ease both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
